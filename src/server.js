@@ -1,7 +1,9 @@
 const Hapi = require('@hapi/hapi');
 const routes = require('./routes');
 
-env = process.env.NODE_ENV.replace('\n', '')
+let env = ""
+if (typeof process.env.NODE_ENV !== 'undefined')
+  env = process.env.NODE_ENV.replace('\n', '')
     .replace('\r', '')
     .replace(' ', '');
 
